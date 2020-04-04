@@ -37,13 +37,18 @@ routes.put('/users', UserController.update);
 
 routes.post('/recipients', RecipientController.store);
 routes.get('/recipients', RecipientController.index);
+routes.get('/recipients/:id', RecipientController.show);
+routes.put('/recipients/:id', RecipientController.update);
+routes.delete('/recipients/:id', RecipientController.delete);
 
 routes.get('/deliverymans', DeliveryManController.index);
+routes.get('/deliverymans/:id', DeliveryManController.show);
 routes.post('/deliverymans', DeliveryManController.store);
 routes.put('/deliverymans/:id', DeliveryManController.update);
 routes.delete('/deliverymans/:id', DeliveryManController.delete);
 
 routes.get('/orders', OrderController.index);
+routes.get('/orders/:id', OrderController.show);
 routes.post('/orders', OrderController.store);
 routes.put('/orders/:id', OrderController.update);
 routes.delete('/orders/:id', OrderController.delete);
